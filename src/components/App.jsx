@@ -26,14 +26,12 @@ export default function App() {
 
   const total = good + bad + neutral;
   const percentage = Math.round((100 / total) * good);
+  const options = ['good', 'neutral', 'bad'];
 
   return (
     <div>
       <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={{ good, bad, neutral }}
-          onLeaveFeedback={onLeaveFeedback}
-        />
+        <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
       </Section>
 
       <Section title="Statistics">
